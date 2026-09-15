@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Tekweb - Landing Page</title>
-    <!-- Import Tailwind CSS via CDN -->
+    <title>Home - Kadek Ari</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
@@ -14,95 +13,58 @@
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-xl font-bold text-blue-600">TugasTekweb.</h1>
             <ul class="flex space-x-6 text-sm font-medium">
-                <li><a href="#biodata" class="hover:text-blue-600 transition">Biodata</a></li>
-                <li><a href="#pendidikan" class="hover:text-blue-600 transition">Pendidikan</a></li>
-                <li><a href="#portfolio" class="hover:text-blue-600 transition">Portfolio</a></li>
+                <!-- Navigasi pindah halaman -->
+                <li><a href="index.html" class="text-blue-600">Home</a></li>
+                <li><a href="portfolio.html" class="hover:text-blue-600 transition">Portfolio</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Header / Biodata Section -->
-    <section id="biodata" class="pt-32 pb-16 px-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <section class="pt-32 pb-16 px-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div class="w-40 h-40 bg-gray-300 rounded-full flex-shrink-0 overflow-hidden shadow-lg">
-            <!-- Ganti src dengan link foto profilmu -->
             <img src="asset/profile.jpg" alt="Foto Profil" class="w-full h-full object-cover">
         </div>
         <div>
-            <h2 class="text-3xl font-bold mb-2">Halo, Saya Kadek Ari Putra Yasa</h2>
+            <!-- Tugas Javascript 1: Sapaan Otomatis -->
+            <h2 class="text-3xl font-bold mb-2" id="sapaan">Halo, Saya Kadek Ari Putra Yasa</h2>
             <p class="text-gray-600 mb-4 text-lg">Mahasiswa Undiksha yang memiliki ketertarikan di bidang Web Development.</p>
             <ul class="space-y-2 text-gray-700">
-                <li><strong>Email:</strong> ari.putra.yasa@student.undiksha.ac.id</li>
                 <li><strong>NIM:</strong> 2415101081</li>
-                <li><strong>Hobi:</strong> Coding, Desain, Membaca</li>
+                <li><strong>Email:</strong> ari.putra.yasa@student.undiksha.ac.id</li>
             </ul>
         </div>
     </section>
 
-    <hr class="max-w-5xl mx-auto border-gray-200">
-
     <!-- Pendidikan Section -->
-    <section id="pendidikan" class="py-16 px-6 max-w-5xl mx-auto">
+    <section class="py-16 px-6 max-w-5xl mx-auto">
         <h2 class="text-2xl font-bold mb-8 text-center">Riwayat Pendidikan</h2>
-        <div class="space-y-6 max-w-3xl mx-auto">
-            <!-- Item Pendidikan 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
                 <h3 class="font-bold text-lg text-blue-600">Universitas Pendidikan Ganesha</h3>
-                <p class="text-gray-500 text-sm mb-2">S1 Ilmu Komputer | 2024 - Sekarang</p>
-                <p class="text-gray-700">Fokus pada Komputasi, rekayasa perangkat lunak dan teknologi web.</p>
+                <p class="text-gray-500 text-sm">S1 Ilmu Komputer | 2024 - Sekarang</p>
             </div>
-            <!-- Item Pendidikan 2 -->
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
                 <h3 class="font-bold text-lg text-blue-600">SMK Pariwisata Banyuatis</h3>
-                <p class="text-gray-500 text-sm mb-2">Jurusan Multimedia | 2021 - 2024</p>
+                <p class="text-gray-500 text-sm">Jurusan Multimedia | 2021 - 2024</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-16 px-6 max-w-5xl mx-auto bg-gray-100 rounded-2xl mb-16">
-        <h2 class="text-2xl font-bold mb-8 text-center">Portfolio & Karya</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <!-- Portfolio Item (Web Vercel Kamu) -->
-            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-                <div class="h-48 bg-gray-200">
-                    <!-- Saran: Screenshot web vercel kamu, lalu masukkan path gambarnya di sini -->
-                    <img src="asset/portfolio.png" alt="Web Portfolio" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2">Personal Web Portfolio</h3>
-                    <p class="text-gray-600 mb-4 text-sm">Website portfolio interaktif yang dibangun sebelumnya untuk menampilkan project-project pribadi.</p>
-                    
-                    <div class="flex space-x-3">
-                        <a href="https://portfolio-silk-beta-487xocrsdq.vercel.app/" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
-                            Kunjungi Web
-                        </a>
-                        <!-- Tombol ini memicu fungsi JavaScript -->
-                        <button onclick="tampilkanInfo()" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition border border-gray-300">
-                            Info Detail
-                        </button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white text-center py-6 text-gray-500 text-sm border-t border-gray-200">
-        <p>&copy; 2024 RIPUT. Tugas Teknologi Web.</p>
+    <footer class="bg-white text-center py-6 text-gray-500 text-sm mt-10">
+        <p>&copy; 2024 Kadek Ari Putra Yasa. Tugas Teknologi Web.</p>
     </footer>
 
-    <!-- Syarat Minimal 1 JavaScript -->
+    <!-- JS Sapaan (Opsional tapi bagus untuk nilai plus) -->
     <script>
-        // Fungsi JS sederhana untuk menampilkan detail portfolio menggunakan alert atau DOM manipulation
-        function tampilkanInfo() {
-            // Bisa menggunakan alert sederhana:
-            alert("Project ini adalah website portfolio pertama saya yang di-deploy menggunakan Vercel. Dibuat menggunakan HTML, CSS, dan JavaScript.");
-            
-            // Atau jika ingin mengubah teks di halaman (DOM Manipulation):
-            // document.getElementById('info-teks').innerText = "Detail berhasil dimuat!";
-        }
+        const jam = new Date().getHours();
+        let ucapan = "Halo";
+        if (jam >= 5 && jam < 11) ucapan = "Selamat Pagi";
+        else if (jam >= 11 && jam < 15) ucapan = "Selamat Siang";
+        else if (jam >= 15 && jam < 18) ucapan = "Selamat Sore";
+        else ucapan = "Selamat Malam";
+        document.getElementById('sapaan').innerText = `${ucapan}, Saya Kadek Ari Putra Yasa`;
     </script>
 </body>
 </html>
